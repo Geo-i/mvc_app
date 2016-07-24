@@ -1,0 +1,22 @@
+.hide{
+    display: none;
+}
+
+.preview_template{
+    background-color: #b4f3ff;
+}
+
+.preview_image{
+    width: 100px;
+    height: 70px;
+    background: url("http://placehold.it/100x70") no-repeat center center;
+    background-size: contain;
+}
+
+.success{
+    color: green;
+}
+
+.warning{
+    color: red;
+}

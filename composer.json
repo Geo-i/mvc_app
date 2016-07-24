@@ -1,0 +1,16 @@
+{
+  "name": "geo/test-project",
+  "description": "tp",
+  "require": {
+    "twbs/bootstrap": "3.3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Core\\": "app/Core/",
+      "Core\\Exceptions\\": "app/Core/Exceptions",
+      "Core\\Interfaces\\": "app/Core/Interfaces",
+      "Models\\": "app/Models/"
+    }
+  }
+}
