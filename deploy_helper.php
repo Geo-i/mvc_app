@@ -26,7 +26,7 @@ class DeployHelper //@todo - заменить на gulp или webpack или ph
             \Core\Helpers\FileSystemHelper::copy_folder($for, $to);
         }
 
-        echo '---success';
+        echo '---finish';
     }
 
 }
