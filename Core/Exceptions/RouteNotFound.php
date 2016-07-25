@@ -8,7 +8,8 @@ class RouteNotFound extends \Exception implements IMvcException
 {
     private $in_message;
 
-    private $uri, $route_template;
+    private $uri;
+    private $route_template;
 
     public function __construct($message = 'Route not found')
     {
@@ -21,7 +22,7 @@ class RouteNotFound extends \Exception implements IMvcException
         $ru = $this->uri ? " |  Requested uri: " . $this->uri : '';
         $rt = $this->route_template ? " |  Parsed route template: " . $this->route_template : '';
 
-        $this->message =  $this->in_message . $ru . $rt;
+        $this->message = $this->in_message . $ru . $rt;
     }
 
     public function setParsedRoute($route_template)

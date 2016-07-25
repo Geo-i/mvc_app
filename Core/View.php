@@ -10,7 +10,7 @@ class View
 
     public function __construct()
     {
-        $config = \App\Application::$config;
+        $config      = \App\Application::$config;
         $conf        = $config['view'];
         $this->title = $config['site']['title'];
 
@@ -31,8 +31,8 @@ class View
 
 
             return $this->renderLayout();
-        } elseif($this->disable) {
-           //значит это ajax метод или метод с редиректом @todo закончить и проверить чтоб ошибки не шли в вывод
+        } elseif ($this->disable) {
+            //значит это ajax метод или метод с редиректом @todo закончить и проверить чтоб ошибки не шли в вывод
         } else {
             throw new \Exception('Template ' . $controller_template . ' not found', 404);
         }

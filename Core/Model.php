@@ -9,16 +9,17 @@ class Model
 {
     private $db;
 
-    public function __get($name){
+    public function __get($name)
+    {
         $config = \App\Application::$config;
 
-        if($name === 'db'){
+        if ($name === 'db') {
 
-            if(is_null($this->db)){
-                $className =  '\\Core\\Databases\\' . $config['db_mode'];
+            if (is_null($this->db)) {
+                $className = '\\Core\\Databases\\' . $config['db_mode'];
 
                 $reflectionClass = new \ReflectionClass($className);
-                $db = $reflectionClass
+                $db              = $reflectionClass
                     ->newInstanceArgs(); // это метод ReflectionClass возвращающий новый объект
 
                 if ($db instanceof IMvcDatabase) {

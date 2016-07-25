@@ -6,7 +6,7 @@ class Helper
 {
     public static function getPasswordHash($pass)
     {
-        $salt  = \App\Application::$config['pass_salt'];
+        $salt = \App\Application::$config['pass_salt'];
         $cost = 10;
 
         return password_hash($pass, PASSWORD_DEFAULT, [

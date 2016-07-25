@@ -8,7 +8,9 @@ use Core\Exceptions\PageNotFound;
 class Router
 {
 
-    private $requestUri, $requestedRoute, $finalRoute;
+    private $requestUri;
+    private $requestedRoute;
+    private $finalRoute;
 
 //    private $regex_path;
 

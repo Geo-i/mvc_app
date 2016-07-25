@@ -3,11 +3,11 @@
 class DeployHelper //@todo - заменить на gulp или webpack или phing
 {
     public static $assets = [
-      [
-          'name' => 'bootstrap',
-          'for' => '/vendor/twbs/bootstrap',
-          'to'  => '/public/vendor/bootstrap',
-      ]
+        [
+            'name' => 'bootstrap',
+            'for'  => '/vendor/twbs/bootstrap',
+            'to'   => '/public/vendor/bootstrap',
+        ]
     ];
 
     public static function run()
