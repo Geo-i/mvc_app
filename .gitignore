@@ -1,2 +1,3 @@
-.htaccess
-.idea
+.idea/*
+composer.lock
+fs_log.log

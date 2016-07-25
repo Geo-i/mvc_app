@@ -1,8 +1,10 @@
 <?php
 
+namespace App\Controllers;
+
 use Core\Controller;
 use Models\FeedbackModel;
-use Core\Helper;
+use Core\Helpers\Helper;
 
 class FeedbackAdminController extends Controller
 {

@@ -8,8 +8,8 @@ $global = include 'global.php';
 
 $params = [
     'pass_salt' => 'some_salt....', // вообще соль можно каждому делать разную
-    'db_mode' => 'mysql',
-    'mysql'   => [
+    'db_mode' => 'MysqlDB',
+    'MysqlDB'   => [
         'host'     => 'host...',
         'database' => 'database....',
         'user'     => 'username....',

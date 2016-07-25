@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/vendor/twbs/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/vendor/reset.min.css" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title><?php echo $this->title; ?></title>
 </head>
 <body class="container">

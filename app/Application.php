@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Main
+class Application
 {
     public static $config;
     public static $router;

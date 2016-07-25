@@ -17,7 +17,7 @@ class Router
         $this->parseRequestUri();
 
         $final_route = null;
-        foreach (\App\Main::$config['routes'] as $route) {
+        foreach (\App\Application::$config['routes'] as $route) {
             if ($this->checkRoute($route)) {
                 $final_route = $route;
                 break;
@@ -68,7 +68,7 @@ class Router
 
     public function getRoute($name)
     {
-        $routes = \App\Main::$config['routes'];
+        $routes = \App\Application::$config['routes'];
         return isset($routes[$name]) ? $routes[$name] : null;
     }
 }

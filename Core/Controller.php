@@ -2,7 +2,7 @@
 
 namespace Core;
 
-use App\Main;
+use App\Application;
 
 class Controller
 {
@@ -10,7 +10,7 @@ class Controller
 
     public function __construct()
     {
-        $this->view = Main::$view;
+        $this->view = Application::$view;
     }
 
 }

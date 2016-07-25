@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controllers;
+
 use Core\Controller;
 use Core\ErrorHandler;
 
@@ -10,7 +12,7 @@ class ErrorController extends Controller
     {
         $this->view->message = ErrorHandler::getMessage();
 
-        if (DEBUG) { //если включен режим отладки, то дополнительно выводить в шаблон полный текст ошибки
+        if (APP_MODE === 'dev') { //дополнительно выводить в шаблон полный текст ошибки
             $this->view->debug_message = ErrorHandler::getDebugMessage();
         }
 

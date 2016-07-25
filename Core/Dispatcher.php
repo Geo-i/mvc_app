@@ -12,18 +12,17 @@ class Dispatcher
     {
         $controller_name       = $route['controller'] . 'Controller';
         $this->controller_name = $controller_name;
-        $controller_path       = APP_DIR . '/Controllers/' . $controller_name . '.php';
-        if (file_exists($controller_path)) {
-            include $controller_path;
-            $this->controller = new $controller_name();
+        $ControllerClass = '\\App\\Controllers\\' . $controller_name;
+        if (class_exists($ControllerClass)) {
+            $this->controller = new $ControllerClass;
 
             if (method_exists($this->controller, $route['action'])) {
                 $this->action = $route['action'];
             } else {
-                throw new \Exception('Method ' . $route['action'] . ' not found in Controller ' . $controller_name, 404);
+                throw new \Exception('Method ' . $route['action'] . ' not found in ' . $ControllerClass, 404);
             }
         } else {
-            throw new \Exception('Controller ' . $controller_name . ' not found', 404);
+            throw new \Exception($ControllerClass . ' not found', 404);
         }
     }
 

@@ -10,7 +10,7 @@ class View
 
     public function __construct()
     {
-        $config = \App\Main::$config;
+        $config = \App\Application::$config;
         $conf        = $config['view'];
         $this->title = $config['site']['title'];
 

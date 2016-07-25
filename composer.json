@@ -7,10 +7,17 @@
   "autoload": {
     "psr-4": {
       "App\\": "app/",
-      "Core\\": "app/Core/",
-      "Core\\Exceptions\\": "app/Core/Exceptions",
-      "Core\\Interfaces\\": "app/Core/Interfaces",
+      "Controllers\\": "app/Controllers",
+      "Core\\": "Core/",
+      "Core\\Exceptions\\": "Core/Exceptions",
+      "Core\\Interfaces\\": "Core/Interfaces",
+      "Core\\Helpers\\": "Core/Helpers",
       "Models\\": "app/Models/"
     }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "php deploy_helper.php"
+    ]
   }
 }
